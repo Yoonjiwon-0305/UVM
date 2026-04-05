@@ -1,0 +1,24 @@
+verdiFindBar -show
+simSetSimulator "-vcssv" -exec "./simv" -args
+debImport "-dbdir" "./simv.daidir"
+debLoadSimResult /home/hedu21/jiwon/0402_adder/wave.fsdb
+wvCreateWindow
+verdiSetActWin -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "1281" "31" "1278" "1360"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcHBDrag -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+wvAddSignal -win $_nWave2 "tb_adder/dut/a\[7:0\]"
+wvAddSignal -win $_nWave2 "tb_adder/dut/b\[7:0\]"
+wvAddSignal -win $_nWave2 "tb_adder/dut/y\[8:0\]"
+wvSetPosition -win $_nWave2 {("dut" 0)}
+wvRenameGroup -win $_nWave2 {G1} {dut}
+srcHBDrag -win $_nTrace1
+wvAddSignal -win $_nWave2 "tb_adder/dut/a\[7:0\]"
+wvAddSignal -win $_nWave2 "tb_adder/dut/b\[7:0\]"
+wvAddSignal -win $_nWave2 "tb_adder/dut/y\[8:0\]"
+wvSetPosition -win $_nWave2 {("dut#1" 0)}
+wvRenameGroup -win $_nWave2 {dut} {dut#1}
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debExit

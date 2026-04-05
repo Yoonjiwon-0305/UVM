@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1775114309.101221765, "rt":0.30, "ut":0.04, "st":0.02}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1775114308.799906218}
+{"VCS_COMP_START_TIME": 1775114308.799906218}
+{"VCS_COMP_END_TIME": 1775114309.432733887}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_access+all -kdb -lca -timescale=1ns/1ps -o simv adder.sv tb_adder.sv"}
