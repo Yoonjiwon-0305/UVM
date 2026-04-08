@@ -1,0 +1,6 @@
+Command exited with non-zero status 3
+{"comelab":{"timestamp_begin":1775650817.717650312, "rt":0.01, "ut":0.00, "st":0.00}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1775650817.401109410}
+{"VCS_COMP_START_TIME": 1775650817.401109410}
+{"VCS_COMP_END_TIME": 1775650817.752106325}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_access+all -kdb -lca -timescale=1ns/1ps -o simv ram.sv tb_ram.sv"}

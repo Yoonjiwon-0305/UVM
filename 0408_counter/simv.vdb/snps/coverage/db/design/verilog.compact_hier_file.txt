@@ -1,0 +1,4 @@
+\$unit::./rtl/counter.sv::./tb/tb_counter.sv...@51560257 02
+tb_counter4070
+uvm_custom_install_recording4070
+uvm_custom_install_verdi_recording4070
