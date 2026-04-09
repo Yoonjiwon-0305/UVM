@@ -1,0 +1,110 @@
+verdiSetActWin -dock widgetDock_<Watch>
+simSetSimulator "-vcssv" -exec "simv" -args \
+           "+UVM_TESTNAME=ram_test +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=1234 -cm line+cond+fsm+tgl+branch+assert -cm_dir coverage.vdb -cm_name sim1"
+debImport "-dbdir" "simv.daidir" "-covdir" "coverage.vdb"
+debLoadSimResult /home/hedu21/jiwon/homework/ram_2/novas.fsdb
+wvCreateWindow
+verdiSetActWin -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "8" "31" "2560" "1369"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiInvokeApp -vdCov
+srcHBDrag -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 0)}
+wvRenameGroup -win $_nWave2 {G1} {r_if(ram_if)}
+wvAddSignal -win $_nWave2 "/tb_ram/r_if/clk" "/tb_ram/r_if/reset_n" \
+           "/tb_ram/r_if/write" "/tb_ram/r_if/addr\[7:0\]" \
+           "/tb_ram/r_if/wdata\[15:0\]" "/tb_ram/r_if/rdata\[15:0\]"
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 0)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 6)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 6)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+verdiSetActWin -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 499 -pos 2 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 501 -pos 2 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 502 -pos 2 -win $_nTrace1
+srcAction -pos 502 2 3 -win $_nTrace1 -name "wdata" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "item.addr" -line 186 -pos 1 -win $_nTrace1
+srcAction -pos 185 5 7 -win $_nTrace1 -name "item.addr" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "addr" -line 46 -pos 1 -win $_nTrace1
+srcAction -pos 45 1 3 -win $_nTrace1 -name "addr" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "wdata" -line 47 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 2)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 3)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 4)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 0)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "write" -line 45 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Watch>
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 5 )} 
+verdiSetActWin -win $_nWave2
+srcHBSelect "tb_ram.r_if" -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcSetScope "tb_ram.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "wdata" -line 17 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "wdata" -line 17 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {17 17 1 8 1 1}
+srcTBAddBrkPnt -win $_nTrace1 -line 17 -file \
+           /home/hedu21/jiwon/homework/ram_2/ram.sv
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "wdata" -line 17 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "tb_ram" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcSetScope "tb_ram.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcHBSelect "tb_ram.r_if" -win $_nTrace1
+srcSetScope "tb_ram.r_if" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.r_if" -win $_nTrace1
+srcHBSelect "tb_ram.r_if" -win $_nTrace1
+srcHBSelect "_vcs_unit__1225334575" -win $_nTrace1
+srcSetScope "_vcs_unit__1225334575" -delim "." -win $_nTrace1
+srcHBSelect "_vcs_unit__1225334575" -win $_nTrace1
+srcHBSelect "uvm_custom_install_verdi_recording" -win $_nTrace1
+srcSetScope "uvm_custom_install_verdi_recording" -delim "." -win $_nTrace1
+srcHBSelect "uvm_custom_install_verdi_recording" -win $_nTrace1
+srcHBSelect "uvm_custom_install_verdi_recording" -win $_nTrace1
+srcSetScope "uvm_custom_install_verdi_recording" -delim "." -win $_nTrace1
+srcHBSelect "uvm_custom_install_verdi_recording" -win $_nTrace1
+srcHBSelect "uvm_pkg" -win $_nTrace1 -lib "work"
+srcSetScope "uvm_pkg" -delim "." -win $_nTrace1 -lib "work"
+srcHBSelect "uvm_pkg" -win $_nTrace1 -lib "work"
+srcHBSelect "_vcs_msglog" -win $_nTrace1 -lib "work"
+srcSetScope "_vcs_msglog" -delim "." -win $_nTrace1 -lib "work"
+srcHBSelect "_vcs_msglog" -win $_nTrace1 -lib "work"
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcSetScope "tb_ram.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcHBSelect "tb_ram.r_if" -win $_nTrace1
+srcSetScope "tb_ram.r_if" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.r_if" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {17 17 13 13 1 4}
+srcDeselectAll -win $_nTrace1
+wvZoomAll -win $_nWave2
+verdiSetActWin -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+eswDebug -eclipse {/tools/synopsys/verdi/W-2024.09-SP2/bin/eclipse} -frontend_debugger_options {} -debugger_type {Eclipse}
+eswDebug -eclipse {/tools/synopsys/verdi/W-2024.09-SP2/bin/eclipse} -frontend_debugger_options {} -debugger_type {Eclipse}
+srcSetScope "uvm_pkg.is_verdi_trace_tlm_used" -delim "." -win $_nTrace1 -lib \
+           "work"
+verdiInvokeApp -vdCov
+debExit

@@ -1,0 +1,121 @@
+verdiSetActWin -dock widgetDock_<Watch>
+simSetSimulator "-vcssv" -exec "simv" -args \
+           "+UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=1234 +UVM_TESTNAME=ram_write_read_test"
+debImport "-dbdir" "simv.daidir"
+debLoadSimResult /home/hedu21/jiwon/0409_ram/novas.fsdb
+wvCreateWindow
+verdiSetActWin -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "1281" "31" "1278" "1360"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcHBDrag -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 0)}
+wvRenameGroup -win $_nWave2 {G1} {r_if(ram_if)}
+wvAddSignal -win $_nWave2 "/tb_ram/r_if/clk" "/tb_ram/r_if/wr" \
+           "/tb_ram/r_if/addr\[7:0\]" "/tb_ram/r_if/wdata\[15:0\]" \
+           "/tb_ram/r_if/rdata\[15:0\]"
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 0)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 5)}
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 5)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+srcTBInvokeSim
+verdiSetActWin -win $_InteractiveConsole_3
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+verdiSetActWin -win $_nWave2
+verdiDockWidgetSetCurTab -dock windowDock_OneSearch
+verdiSetActWin -win $_OneSearch
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+verdiDockWidgetSetCurTab -dock windowDock_InteractiveConsole_3
+verdiSetActWin -win $_InteractiveConsole_3
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+verdiSetActWin -win $_nWave2
+srcTBRunSim
+wvZoomAll -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+verdiDockWidgetSetCurTab -dock windowDock_InteractiveConsole_3
+verdiSetActWin -win $_InteractiveConsole_3
+verdiInvokeApp -vdCov
+verdiDockWidgetSetCurTab -dock widgetDock_<Decl._Tree>
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+verdiDockWidgetSetCurTab -dock widgetDock_<Class._Tree>
+verdiSetActWin -dock widgetDock_<Class._Tree>
+verdiDockWidgetSetCurTab -dock widgetDock_<Object._Tree>
+verdiSetActWin -dock widgetDock_<Object._Tree>
+srcTBObjectBrowser -treeExpand "uvm_custom_install_verdi_recording"
+srcTBObjectBrowser -treeCollapse "uvm_custom_install_verdi_recording"
+srcTBObjectBrowser -treeExpand "uvm_custom_install_recording"
+verdiDockWidgetSetCurTab -dock widgetDock_<Inst._Tree>
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcSetScope "tb_ram.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.dut" -win $_nTrace1
+srcHBSelect "uvm_custom_install_recording" -win $_nTrace1
+srcHBSelect "tb_ram.r_if.mon_cb" -win $_nTrace1
+srcSetScope "tb_ram.r_if.mon_cb" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.r_if.mon_cb" -win $_nTrace1
+srcHBSelect "tb_ram.r_if.drv_cb" -win $_nTrace1
+srcSetScope "tb_ram.r_if.drv_cb" -delim "." -win $_nTrace1
+srcHBSelect "tb_ram.r_if.drv_cb" -win $_nTrace1
+verdiDockWidgetSetCurTab -dock widgetDock_<Decl._Tree>
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+srcTBBTreeSelect -win $_nTrace1 -path "tb_ram"
+srcTBTreeAction -win $_nTrace1 -path "tb_ram"
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 11 -pos 3 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 12 -pos 3 -win $_nTrace1
+srcAction -pos 12 3 8 -win $_nTrace1 -name "\"ram_env.sv\"" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcTBTreeAction -win $_nTrace1 -path "tb_ram"
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+verdiDockWidgetSetCurTab -dock widgetDock_<Stack>
+verdiSetActWin -dock widgetDock_<Stack>
+srcTBShowSourceCode -win $_nTrace1 -file \
+           "/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh" \
+           -line 527 -frameId "25:71:3145"
+srcSelect -win $_nTrace1 -range {527 527 1 4 1 1}
+srcTBStackBrowser -active -activate \
+           "tb_ram@0.tb_ram@25.run_test@25.uvm_root::run_test@25"
+srcTBStackBrowser -select "tb_ram@0.tb_ram@25.run_test@25" -active
+srcTBShowSourceCode -win $_nTrace1 -file \
+           "/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_globals.svh" \
+           -line 49 -frameId "25:66:3191"
+srcSelect -win $_nTrace1 -range {49 49 1 7 1 1}
+srcTBStackBrowser -active -activate "tb_ram@0.tb_ram@25.run_test@25"
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+verdiSetActWin -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 4)}
+wvExpandBus -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 3 )} 
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 3)}
+wvExpandBus -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 3 )} 
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 3)}
+wvCollapseBus -win $_nWave2
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 3)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+wvSelectSignal -win $_nWave2 {( "r_if(ram_if)" 4 )} 
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 4)}
+wvCollapseBus -win $_nWave2
+wvSetPosition -win $_nWave2 {("r_if(ram_if)" 4)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetCursor -win $_nWave2 731276.233184 -snap {("G2" 0)}
+debExit

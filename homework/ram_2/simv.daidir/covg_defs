@@ -1,0 +1,151 @@
+global coverage_group 0 0 $unit::ram_coverage::ram_cg __coverage_ram_coverage.ram_cg unused_ram_coverage_ram_cg_loop_label $unit 0 1 0 1 $unit::/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/macros/snps_macros.svp::/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/macros/uvm_callback_defines.svh...@1225334575 0  ( 0 
+)
+ 1 1
+ 0 43 /home/hedu21/jiwon/homework/ram_2/tb_ram.sv
+ 252 0 0 0 1 0 0 0 0  1
+0
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+4
+0
+2
+0
+ 10 cp_reset_n 253 0 0 0 0 0 0 130 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn 130 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 1 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 6 active 254 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_0 0 0 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 8 inactive 254 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_1 0 0 0 0 0 0 0
+ 0
+
+ 8 cp_write 257 0 0 0 0 0 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_2 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_2 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 1 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 8 write_op 258 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_1 0 0 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 7 read_op 258 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_0 0 0 0 0 0 0 0
+ 0
+
+ 7 cp_addr 261 0 0 0 0 0 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_3 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_3 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 8 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 3 low 262 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_4 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_5 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 4 high 262 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_6 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_7 0 0 0 0 0
+ 0
+
+ 8 cp_wdata 265 0 0 0 0 0 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_8 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_8 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 16 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 4 1 1 0 0 1 1 4 zero 266 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_9 0 0 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 3 low 267 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_a 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_b 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 4 high 268 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_c 0 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_d 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 3 max 269 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 132 _vcs_unit__1225334575_ram_coverage_11_0::_vcs_unit__1225334575_ram_coverage_11_0__vcs_unit__1225334575_ram_coverage_11_0_ram_cg_fn_e 0 0 0 0 0 0 0
+ 0
+
+ 13 cx_write_addr 0 273 0 0 -1 0 0 0 0 2 1 2 0 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 12 cx_rst_write 0 274 0 0 -1 0 0 0 0 2 0 1 0 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
