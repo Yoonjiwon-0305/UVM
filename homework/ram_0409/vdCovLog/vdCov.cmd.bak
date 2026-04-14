@@ -1,0 +1,31 @@
+verdiWindowResize -win $_vdCoverage_1 "830" "370" "1024" "709"
+gui_set_pref_value -category {coveragesetting} -key {geninfodumping} -value 1
+gui_exclusion -set_force true
+verdiSetFont  -font  {DejaVu Sans}  -size  11
+verdiSetFont -font "DejaVu Sans" -size "11"
+gui_assert_mode -mode flat
+gui_class_mode -mode hier
+gui_excl_mgr_flat_list -on  0
+gui_covdetail_select -id  CovDetail.1   -name   Line
+verdiWindowWorkMode -win $_vdCoverage_1 -coverageAnalysis
+verdiSetActWin -dock widgetDock_<CovDetail>
+verdiWindowResize -win $_vdCoverage_1 "830" "370" "1024" "709"
+gui_open_cov  -hier coverage.vdb -testdir  {coverage.vdb} -test { coverage/sim1 } -merge MergedTest -db_max_tests 10 -sdc_level 1 -fsm transition
+gui_set_pref_value -category {ColumnCfg} -key {covtblAssertList_Assert} -value {true}
+gui_set_pref_value -category {ColumnCfg} -key {covtblAssertList_Match} -value {false}
+gui_set_pref_value -category {ColumnCfg} -key {covtblAssertList_Success} -value {false}
+gui_covtable_show -show  { Module List } -id  CoverageTable.1  -test  MergedTest
+gui_covtable_show -show  { Function Groups } -id  CoverageTable.1  -test  MergedTest
+verdiSetActWin -dock widgetDock_<Summary>
+gui_list_sort -id  CoverageTable.1   -list {covtblFGroupsList} -descending  {Group}
+gui_list_sort -id  CoverageTable.1   -list {covtblFGroupsList} {Group}
+gui_list_sort -id  CoverageTable.1   -list {covtblFGroupsList} -descending  {Group}
+verdiDockWidgetSetCurTab -dock widgetDock_<RMSERVER>
+verdiDockWidgetSetCurTab -dock widgetDock_Message
+verdiSetActWin -dock widgetDock_Message
+verdiSetActWin -dock widgetDock_<Summary>
+verdiWindowWorkMode -win $_vdCoverage_1 -coverageAnalysis
+verdiSetActWin -dock widgetDock_Message
+verdiWindowResize -win $_vdCoverage_1 "830" "370" "1024" "709"
+verdiSetActWin -dock widgetDock_<Summary>
+vdCovExit -noprompt

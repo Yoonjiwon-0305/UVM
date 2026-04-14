@@ -1,0 +1,99 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_W-2024.09-SP2
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = 
+[hb]
+postSimFile = /home/hedu21/jiwon/0413_uart/novas.fsdb
+syncTime = 332528093.052
+viewport = 1281 31 1278 1360 0 0 564 1276
+activeNode = "tb_uart.dut.U_UART_TX"
+activeScope = "tb_uart.dut.U_UART_TX"
+activeFile = "./rtl/uart_tx.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 30
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+safetyAwareAnnot = True
+amsAnnot = True
+DnDtraceCrossHierOnly = True
+leadingZero = False
+signalPane = False
+SourceVerticalScrollLines = 5
+Scope1 = "tb_uart.dut.U_UART_TX"
+Scope2 = "tb_uart.dut.U_UART_RX"
+Scope3 = "tb_uart.dut"
+Scope4 = "tb_uart"
+multipleSelection = 1 49 1 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-dbdir" "simv.daidir" 
+invokeDir = /home/hedu21/jiwon/0413_uart
+[hb.sourceTab.1]
+scope = tb_uart.dut.U_UART_TX
+File = /home/hedu21/jiwon/0413_uart/rtl/uart_tx.sv
+Line = 31
+[nMemoryManager]
+WaveformFile = /home/hedu21/jiwon/0413_uart/novas.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 25 1278 591 100 65
+primaryWindow = TRUE
+SessionFile = /home/hedu21/jiwon/0413_uart/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+waveformToolTip = FALSE
+snap = FALSE
+displayLeadingZeros = FALSE
+displayGridLine = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE
+fsaRegMask = TRUE
+fsaCoreMask = TRUE
+fsaSfsmMask = TRUE
+fsaEcrMask = TRUE
+tPropMask = TRUE

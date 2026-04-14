@@ -1,0 +1,111 @@
+Invoking simulator...
+Verdi>simv +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=1234 -cm line+cond+fsm+tgl+branch+assert -cm_dir coverage.vdb -cm_name sim1 +UVM_TESTNAME=ram_base_test -sml=verdi +fsdb+gate=off -ucli2Proc -ucli
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Apr 12 22:32 2026
+Warning : License for product VCS-BASE-RUNTIME will expire within 10 days, on: 21-apr-2026.
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+  ***********       IMPORTANT RELEASE NOTES         ************
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+ VCS Coverage Metrics Release W-2024.09-SP1_Full64 Copyright (c) 1991-2024 by Synopsys Inc.
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* : Create FSDB file '/home/hedu21/jiwon/homework/ram_0409/inter.fsdb'
+*Verdi* : Flush all FSDB Files at 0 ps.
+*Verdi* : Enable RPC Server(2235573)
+Verdi>fsdbDumpvars 0 "tb_ram.r_if.clk"  +all +trace_process;fsdbDumpvars 0 "tb_ram.r_if.wr"  +all +trace_process;fsdbDumpvars 0 "tb_ram.r_if.addr"  +all +trace_process;fsdbDumpvars 0 "tb_ram.r_if.wdata"  +all +trace_process;fsdbDumpvars 0 "tb_ram.r_if.rdata"  +all +trace_process
+*Verdi* : Dumping the signal (tb_ram.r_if.clk).
+*Verdi* : Dumping the signal (tb_ram.r_if.wr).
+*Verdi* : Dumping the signal (tb_ram.r_if.addr).
+*Verdi* : Dumping the signal (tb_ram.r_if.wdata).
+*Verdi* : Dumping the signal (tb_ram.r_if.rdata).
+*Verdi* : Flush all FSDB Files at 0 ps.
+Verdi>run
+UVM_INFO @ 0: reporter [RNTST] Running test ram_base_test...
+*Verdi* WARNING: Env/runtime option has specified fsdbfile name as "/home/hedu21/jiwon/homework/ram_0409/inter.fsdb". Fsdbfile name in task "novas.fsdb" is ignored.
+*Verdi* : Begin traversing the scope (tb_ram), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+UVM_INFO ./tb/ram_test.sv(30) @ 0: uvm_test_top [TEST] ram test 완료
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 0: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ./tb/ram_coverage.sv(48) @ 0: uvm_test_top.env.cov [ram_coverage] 
+
+===== Coverage Summary =====
+UVM_INFO ./tb/ram_coverage.sv(49) @ 0: uvm_test_top.env.cov [ram_coverage]      Overall: 0.0%
+UVM_INFO ./tb/ram_coverage.sv(51) @ 0: uvm_test_top.env.cov [ram_coverage]      write:   0.0%
+UVM_INFO ./tb/ram_coverage.sv(54) @ 0: uvm_test_top.env.cov [ram_coverage]      addr:    0.0%
+UVM_INFO ./tb/ram_coverage.sv(57) @ 0: uvm_test_top.env.cov [ram_coverage]      wdata:   0.0%
+UVM_INFO ./tb/ram_coverage.sv(60) @ 0: uvm_test_top.env.cov [ram_coverage]      cross(write,addr): 0.0%
+UVM_INFO ./tb/ram_coverage.sv(64) @ 0: uvm_test_top.env.cov [ram_coverage] 
+
+===== Coverage Summary =====
+
+
+UVM_INFO ./tb/ram_scoreboard.sv(56) @ 0: uvm_test_top.env.scb [ram_scoreboard]  ===== Scoreboard Summary =====
+UVM_INFO ./tb/ram_scoreboard.sv(57) @ 0: uvm_test_top.env.scb [ram_scoreboard]  Total transaction: 0
+UVM_INFO ./tb/ram_scoreboard.sv(58) @ 0: uvm_test_top.env.scb [ram_scoreboard]  Pass: 0
+UVM_INFO ./tb/ram_scoreboard.sv(59) @ 0: uvm_test_top.env.scb [ram_scoreboard]  Fail: 0
+UVM_INFO ./tb/ram_scoreboard.sv(64) @ 0: uvm_test_top.env.scb [ram_scoreboard] TEST PASSED: 0 all matches detected
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 0: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   17
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[ram_coverage]     7
+[ram_scoreboard]     5
+
+$finish called from file "/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                    0
+Simulation complete, time is 0 ps.
+uvm_root.svh, 527 :     $finish;
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      0.170 seconds;       Data structure size:   0.6Mb
+Sun Apr 12 22:35:16 2026
+debExit

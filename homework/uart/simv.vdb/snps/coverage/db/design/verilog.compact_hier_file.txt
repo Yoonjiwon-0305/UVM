@@ -1,0 +1,4 @@
+\$unit::../uart/rtl/uart.sv::../uart/tb/tb_uart.sv...@633170272 02
+tb_uart4070
+uvm_custom_install_recording4070
+uvm_custom_install_verdi_recording4070

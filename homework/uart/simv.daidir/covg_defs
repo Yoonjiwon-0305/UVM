@@ -1,0 +1,65 @@
+global coverage_group 0 0 $unit::uart_coverage::uart_cg __coverage_uart_coverage.uart_cg unused_uart_coverage_uart_cg_loop_label $unit 0 1 0 1 $unit::../uart/rtl/uart.sv::../uart/tb/tb_uart.sv...@633170272 0  ( 0 
+)
+ 1 1
+ 0 52 /home/hedu21/jiwon/homework/uart/tb/uart_coverage.sv
+ 13 0 0 0 1 0 0 0 0  1
+0
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 10 cp_tx_data 14 0 0 0 0 0 0 131 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn 131 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 8 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 4 1 1 0 0 1 1 3 low 15 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_0 0 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_1 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 7 mid_low 16 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_2 0 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_3 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 8 mid_high 17 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_4 0 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_5 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 4 high 18 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_6 0 133 _vcs_unit__633170272_uart_coverage_11_0::_vcs_unit__633170272_uart_coverage_11_0__vcs_unit__633170272_uart_coverage_11_0_uart_cg_fn_7 0 0 0 0 0
+ 0
+
+end_coverage_group

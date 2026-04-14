@@ -1,0 +1,59 @@
+Magic 271485
+Revision Verdi_W-2024.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 846 631 100 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/hedu21/jiwon/homework/ram_0409/novas.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 7782050.000000
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 6
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "r_if(ram_if)"
+activeDirFile "" "/home/hedu21/jiwon/homework/ram_0409/novas.fsdb"
+addSignal -h 15 /tb_ram/r_if/clk
+addSignal -h 15 -holdScope wr
+addSignal -h 15 -UNSIGNED -HEX -holdScope addr[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope wdata[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope rdata[15:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

@@ -1,0 +1,14 @@
+<Command name="schRTLInfo"  delimiter="."  >
+<RTLBlock >
+<RTLInfo   name="state_0"  type="2"  fileName="./rtl/uart_tx.sv"  >
+    <Seg beginLine="26"  endLine="64"  />
+  </RTLInfo>
+ <Instance name="tb_uart.dut.U_UART_TX"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="state_1"  type="2"  fileName="./rtl/uart_rx.sv"  >
+    <Seg beginLine="25"  endLine="58"  />
+  </RTLInfo>
+ <Instance name="tb_uart.dut.U_UART_RX"  />
+</RTLBlock>
+ </Command>

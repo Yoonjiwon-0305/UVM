@@ -1,0 +1,118 @@
+simSetSimulator "-vcssv" -exec "simv" -args \
+           "+ntb_random_seed=1234 -cm line+cond+fsm+tgl+branch+assert -cm_dir coverage.vdb -cm_name sim1"
+debImport "-dbdir" "simv.daidir"
+debLoadSimResult /home/hedu21/jiwon/0413_uart/novas.fsdb
+wvCreateWindow
+verdiSetActWin -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "1281" "31" "1278" "1360"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcHBDrag -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+wvSetPosition -win $_nWave2 {("dut" 0)}
+wvRenameGroup -win $_nWave2 {G1} {dut}
+wvAddSignal -win $_nWave2 "/tb_uart/dut/clk" "/tb_uart/dut/reset" \
+           "/tb_uart/dut/tx_data\[7:0\]" "/tb_uart/dut/tx_start" \
+           "/tb_uart/dut/tx" "/tb_uart/dut/tx_busy" "/tb_uart/dut/rx" \
+           "/tb_uart/dut/rx_data\[7:0\]" "/tb_uart/dut/rx_done"
+wvSetPosition -win $_nWave2 {("dut" 0)}
+wvSetPosition -win $_nWave2 {("dut" 9)}
+wvSetPosition -win $_nWave2 {("dut" 9)}
+wvZoomAll -win $_nWave2
+verdiSetActWin -win $_nWave2
+srcHBSelect "tb_uart.receive_data" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_uart.dut" -win $_nTrace1
+srcSetScope "tb_uart.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_uart.dut" -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_SYNC_RX" -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_UART_RX" -win $_nTrace1
+srcSetScope "tb_uart.dut.U_UART_RX" -delim "." -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_UART_RX" -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_UART_RX" -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_UART_TX" -win $_nTrace1
+srcSetScope "tb_uart.dut.U_UART_TX" -delim "." -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_UART_TX" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "state" -line 18 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcAction -pos 17 3 2 -win $_nTrace1 -name "state" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "state" -line 18 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("dut" 2)}
+wvSetPosition -win $_nWave2 {("dut" 3)}
+wvSetPosition -win $_nWave2 {("dut" 4)}
+wvSetPosition -win $_nWave2 {("dut" 5)}
+wvSetPosition -win $_nWave2 {("dut" 6)}
+wvSetPosition -win $_nWave2 {("dut" 7)}
+wvSetPosition -win $_nWave2 {("dut" 8)}
+wvSetPosition -win $_nWave2 {("dut" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 "/tb_uart/dut/U_UART_TX/state\[1:0\]"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcHBSelect "tb_uart.dut.U_UART_RX" -win $_nTrace1
+srcSetScope "tb_uart.dut.U_UART_RX" -delim "." -win $_nTrace1
+srcHBSelect "tb_uart.dut.U_UART_RX" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "state" -line 17 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSetPosition -win $_nWave2 {("dut" 2)}
+wvSetPosition -win $_nWave2 {("dut" 5)}
+wvSetPosition -win $_nWave2 {("dut" 6)}
+wvSetPosition -win $_nWave2 {("dut" 8)}
+wvSetPosition -win $_nWave2 {("dut" 9)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("dut" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvAddSignal -win $_nWave2 "/tb_uart/dut/U_UART_RX/state\[1:0\]"
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetCursor -win $_nWave2 1995168558.310627 -snap {("G4" 0)}
+verdiSetActWin -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSelectGroup -win $_nWave2 {G4}
+wvSelectGroup -win $_nWave2 {G2}
+wvSetOptions -win $_nWave2 -snap off
+wvDeselectAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectGroup -win $_nWave2 {G2}
+wvRenameGroup -win $_nWave2 {G2} {rx}
+wvSetCursor -win $_nWave2 233151881.335150
+wvSetCursor -win $_nWave2 389860522.888283
+srcActiveTrace "tb_uart.dut.U_UART_TX.state\[1:0\]" -TraceByDConWave -TraceTime \
+           104185000 -TraceValue 10 -win $_nTrace1
+wvSetCursor -win $_nWave2 412793494.822888
+wvSetCursor -win $_nWave2 412793494.822888
+wvSetCursor -win $_nWave2 412793494.822888
+wvSetCursor -win $_nWave2 386038360.899183
+srcActiveTrace "tb_uart.dut.U_UART_RX.state\[1:0\]" -TraceByDConWave -TraceTime \
+           52105000 -TraceValue 10 -win $_nTrace1
+wvSetCursor -win $_nWave2 386038360.899183
+srcActiveTrace "tb_uart.dut.U_UART_RX.state\[1:0\]" -TraceByDConWave -TraceTime \
+           52105000 -TraceValue 10 -win $_nTrace1
+wvSetCursor -win $_nWave2 332528093.051771
+srcActiveTrace "tb_uart.dut.U_UART_TX.state\[1:0\]" -TraceByDConWave -TraceTime \
+           104185000 -TraceValue 10 -win $_nTrace1
+wvSelectGroup -win $_nWave2 {rx}
+wvSelectGroup -win $_nWave2 {rx}
+wvSelectGroup -win $_nWave2 {rx}
+wvSelectGroup -win $_nWave2 {rx}
+wvRenameGroup -win $_nWave2 {rx} {TX}
+wvSelectSignal -win $_nWave2 {( "TX" 1 )} 
+wvSetPosition -win $_nWave2 {("TX" 1)}
+wvExpandBus -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSelectSignal -win $_nWave2 {( "TX" 1 )} 
+wvSetPosition -win $_nWave2 {("TX" 1)}
+wvCollapseBus -win $_nWave2
+wvSetPosition -win $_nWave2 {("TX" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSelectGroup -win $_nWave2 {G3}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSelectGroup -win $_nWave2 {G3}
+wvRenameGroup -win $_nWave2 {G3} {RX}
